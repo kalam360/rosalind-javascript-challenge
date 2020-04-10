@@ -226,6 +226,31 @@ const cons = (data) => {
 }
 
 
+// http://rosalind.info/problems/fibd/
+// Sample Dataset
+// 6 3
+// Sample Output
+// 4
+
+// matures after 1 
+// multiplies 2 (male and female )
+// dies after 3
+// runs for 6 generation
+
+const fibd = data => {
+     let [n,m] = data.split(" ").map(d => parseInt(d))
+    let ages = [1].concat(Array(m-1).fill(0))
+    let sum = 0;
+    _.range(n-1).forEach(d => {
+        tem = ages.slice(0, -1);
+        ages = [ages.slice(1).reduce((a,b)=> a+b, 0)].concat(tem)
+    })
+    console.log(ages.reduce((a,b)=> a+b))
+
+
+    
+}
+
 
 // exporting the functions
 module.exports = {
@@ -237,6 +262,7 @@ module.exports = {
   hamm,
   prot,
   subs,
-  cons
+  cons,
+  fibd
 };
 

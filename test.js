@@ -5,7 +5,7 @@ fs.readFile('./input.txt', (err, buff)=>{
     
     const data = buff.toString()
     
-    biostrng.cons(data)
+    biostrng.fibd(data)
 })
 
 
