@@ -245,11 +245,10 @@ const fibd = data => {
         tem = ages.slice(0, -1);
         ages = [ages.slice(1).reduce((a,b)=> a+b, 0)].concat(tem)
     })
-    console.log(ages.reduce((a,b)=> a+b))
-
-
-    
+    console.log(ages.reduce((a,b)=> a+b))  
 }
+
+
 
 
 // exporting the functions
